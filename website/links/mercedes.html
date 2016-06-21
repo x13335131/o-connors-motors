@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>O'Connors|Mercedes </title>
+		<link href="../css/mercedes.css" type="text/css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'/>
+		
+		<script type="text/javascript"><!-- SLIDESHOW SCRIPT -->
+			<!-->
+			var image1=new Image()
+			image1.src="../mercedes/logos/audi.jpg"
+			var image2=new Image()
+			image2.src="../mercedes/logos/bugatti.jpg"
+			var image3=new Image()
+			image3.src="../mercedes/logos/ferrari.jpg"
+			var image4=new Image()
+			image4.src="../mercedes/logos/lambo.jpg"
+			var image5=new Image()
+			image5.src="../mercedes/logos/mercedes.jpg"
+			//-->
+			
+		</script>
+		<script language="JavaScript" type="text/javascript"><!--CHANGING FONT -->
+		function changeFontSize(inc)
+		{
+		var p = document.getElementsByTagName('p');
+		for(n=0; n<p.length; n++) {
+		if(p[n].style.fontSize) {
+		var size = parseInt(p[n].style.fontSize.replace("px", ""));
+		} else {
+		var size = 18;
+		}
+		p[n].style.fontSize = size+inc + 'px';
+		}
+		}
+				</script>
+	</head>
+	
+	<body id="body">
+		<div id="wrapper">
+			<div id="login">
+				<div id="left_header"><!--LOGO -->
+					<img src= "../mercedes/logos/logo.png" alt=""/>
+					</div>
+					<div id="right_header"><!--LOGIN SCRIPT -->
+						<script type = "text/javascript">
+							var count = 2;
+							function validate() {
+							var un = document.myform.username.value;
+							var pw = document.myform.pword.value;
+							var valid = false;
+							var unArray = ["username1", "username2", "username3", "username4" , "username5"];
+							var pwArray = ["password1", "password2", "password3", "password4" , "password5"];
+							for (var i=0; i <unArray.length; i++) {
+							if ((un == unArray[i]) && (pw == pwArray[i])) {
+							valid = true;
+							break;
+							}
+							}
+							if (valid) {
+							alert ("Login was sucessful. You will be redirected to the Newsletter Signup Page Now.");
+							window.location = "signup.html";
+							return false;
+							}
+							var t = " tries";
+							if (count == 1) {t = " try"}
+							if (count >= 1) {
+							alert ("Invalid username and/or password.  You have " + count + t + " left.");
+							document.myform.username.value = "";
+							document.myform.pword.value = "";
+							setTimeout("document.myform.username.focus()", 25);
+							setTimeout("document.myform.username.select()", 25);
+							count --;
+							}
+							else {
+							alert ("Still incorrect! You have no more attempts left!");
+							document.myform.username.value = "No more attempts allowed!";
+							document.myform.pword.value = "";
+							document.myform.username.disabled = true;
+							document.myform.pword.disabled = true;
+							return false;
+							}
+						}
+					</script>
+					
+					<form name = "myform"><!-- LOGIN-->
+						<table>
+						<tr><td>
+							Newsletter Registration 
+						</td>
+						</tr>
+						<tr>
+						<td>
+							Enter User Name <input type="text" name="username">
+						 </td>
+						 </tr>
+						 <tr>
+						 <td>
+						Enter Password <input type="password" name="pword"> 
+						</td></tr>
+						<tr>
+						<td>
+						<input type="button" value="Sign In" name="Submit" onclick= "validate()"> 
+						</td>
+						</tr>
+						</table>
+					
+					</form>
+				</div>			
+			</div>
+			
+			<div id="top_menu"><!--TOP LINK MENU -->
+				<nav >
+					<ul>
+						<li class = "Button" > <a href = "../index.html"> Home </a> </li> 
+						<li class = "Button" > <a href = "../links/ferrari.html">  Ferrari </a> </li>
+						<li class = "Button" > <a href = "../links/audi.html"> Audi</a> </li>
+						<li class = "Button" > <a href = "../links/lamborghini.html"> Lamborghini</a>  </li>
+						<li class = "Button" > <a href = "../links/bugatti.html"> Bugatti</a>  </li>
+						<li class = "Button" > <a href = "mercedes.html"> Mercedes </a>  </li>
+					</ul>
+				</nav>
+			</div>
+			
+			<div id="maintext"><!-- BODY-->
+			<p id="font_size"><!-- CHANGING FONT-->
+				Font size:
+				<a href="javascript:changeFontSize(1)"><img src = "../mercedes/buttons/plus.jpg" alt ="plus"/></a> 
+				<a href="javascript:changeFontSize(-1)"><img src = "../mercedes/buttons/minus.jpg" alt ="minus"/></a>
+				</p>
+				<p>Mercedes-benz is a German automobile manufacturer  a multinational division of the German manufacturer Daimler AG.
+				The brand is used for luxury automobiles, buses, coaches, and trucks.The headquarters of Mercedes-Benz is in Stuttgart, Baden-Wurttemberg, Germany.
+				The name first appeared in 1926 under Daimler-Benz but traces its origins to Daimler-Motoren-Gesellschaft's 1901 Mercedes and to Karl Benz's 1886 Benz Patent Motorwagen, 
+				which is widely regarded as the first automobile. Mercedes-Benz's slogan is "Das Beste oder nichts" (English: "The best or nothing").
+				Mercedes-Benz is part of the "German Big 3" luxury automakers, along with Audi and BMW, which are the best selling luxury automakers in the world.</p> 
+				
+				<section id = "merc_section"><!-- IMAGES OF CARS-->
+			<article>
+				<nav id="merc">
+					<ul>
+						<li class = "Image"> <img src = "../mercedes/images/m1.jpg" alt = "m1" width="500" height="300"/> <p> Mercedes 63 AMG Black Series </p> <p>6.3 litre V8 engine,<br> The AMG SPEEDSHIFT MCT 7-speed sports transmission provides dynamic power transmission.</p><p>&euro;520,000</p> </li>
+						<li class = "Image"> <img src = "../mercedes/images/m2.jpg" alt = "m2" width="500" height="300"/> <p> Mercedes SLS </p> <p>"The gullwing model accelerates from zero to 100 km/h in 3.8 seconds and achieves a top speed<br> of 317 km/h."</p><p>&euro;260,925</p> </li>
+						<li class = "Image"> <img src = "../mercedes/images/m3.jpg" alt = "m3" width="500" height="300"/> <p> Mercedes-benz SLR Mclaren </p> <p>"can reach a top speed of 337 km/h (209 mph) faster than the standard Mercedes-Benz SLR McLaren"</p> <p>&euro;500,000</p></li>
+						<li class = "Image"> <img src = "../mercedes/images/m4.jpg" alt = "m4" width="500" height="300"/> <p> Mercedes SLS </p> <p>"capable of accelerating from 0 to 60 mph (97 km/h) in 3.2 seconds"</p><p>&euro;250,499</p></li>
+						<li class = "Image"> <img src = "../mercedes/images/m5.jpg" alt = "m5" width="500" height="300"/> <p> Mercedes SLK 55 amg </p><p>twin-turbocharged M157 V8 engine</p> <p>&euro;210,000</p></li>
+						<li class = "Image"> <img src = "../mercedes/images/m6.jpg" alt = "m6" width="500" height="300"/> <p> Mercedes-Benz SLS </p>583 horsepower<p></p> <p>&euro;250,580</p></li>
+					</ul>
+				</nav>
+			</article>
+			</section>
+			<section id="slide_show"><!--SLIDESHOW -->
+				<img src="../mercedes/logos/audi.jpg" id="slide" width="500" height="250" alt ="Slideshow" />  
+				<script type="text/javascript">
+					<!--
+					var step=1
+					function slideit(){
+					document.images.slide.src=eval("image"+step+".src")
+					if(step<5)
+					step++
+					else
+					step=1
+					setTimeout("slideit()",5000)
+					}
+					slideit()
+					//-->
+				</script>
+					</section>
+				<footer id ="copyright"><!--FOOTER -->
+					<p> &copy; 2014 O'Connors | All Rights Reserved </p>
+					<ul>
+						<li class = "Icon"> <a href ="https://www.facebook.com/pages/OConnors/376949612483205"> <img src = "../mercedes/buttons/facebook.png" alt ="Facebook"/> </a> </li>
+						<li class = "Icon"> <a href ="http://www.youtube.com/channel/UCY1estaEUGTtGGGKvEuXK0Q?feature=watch"> <img src = "../mercedes/buttons/youtube.png" alt ="YouTube"/> </a> </li>
+						<li class = "Icon"> <a href ="mailto:Oconnorscars@gmail.com"> <img src = "../mercedes/buttons/email.png" alt ="Email"/> </a> </li>
+						<li class = "Icon"> <a href ="https://twitter.com/OConnorsCars"> <img src = "../mercedes/buttons/twitter.png" alt ="Twitter"/> </a> </li>
+					</ul>
+					
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

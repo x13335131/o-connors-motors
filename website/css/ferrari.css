@@ -1,0 +1,189 @@
+#body	{
+		background-color: #fff;
+		}
+#wrapper{
+		min-height: 800px;
+		width: 95%;
+		background-color: #eee;
+		color:white;
+		margin: 0 auto;
+		padding: 10px 10px 10px 10px;
+	
+	   -moz-box-shadow:     0 0 10px #000000;
+	   -webkit-box-shadow:  0 0 10px #000000;
+	   box-shadow:          0 0 10px #000000;
+
+		}
+#login{
+		width: 100%;
+		height: 100px;
+}		
+#left_header{
+		height: 20%;
+		width: 50%;
+		color:black;
+		float:left;
+		}
+#right_header{
+		height: 20%;
+		width: 300px;
+		color:black;
+		float:right;
+		text-align: right;
+		}
+
+#top_menu{
+width: 100%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+#top_menu li{
+	display:inline-block;
+	list-style:none;
+	font-family: Myriad pro;
+	font-size: 64px;
+	color: white; 
+ }
+ #top_menu li a{
+  font-family: 'Brush Script MT', cursive;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 26.3999996185303px;
+	color: black;
+ }
+ 	.Button {
+		width:auto;
+		-webkit-transition: all 200ms ease-out;
+		   -moz-transition: all 200ms ease-out;
+		        transition: all 200ms ease-out;
+	}		
+	.Button {
+		margin:auto;
+		display:block;
+		border:none;
+		
+		-webkit-transform: scale(.5);
+		   -moz-transform: scale(.5);
+		    -ms-transform: scale(.5);
+		     -o-transform: scale(.5);		
+		        transform: scale(.5);
+	
+		-webkit-transition: all 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+		   -moz-transition: all 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+		        transition: all 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	}	
+	.Button:hover {
+		background-color:white;
+		background-color: rgba(200,200,200,.3);
+		-webkit-border-radius: 10px;
+		border-radius: 10px;		
+		cursor: pointer;
+	}	
+	.Button:hover {
+		-moz-transform: scale(.7);
+		-webkit-transform: scale(.7);
+		-o-transform: scale(.7);
+		-ms-transform: scale(.7);
+		transform: scale(.7);
+}
+
+#maintext{
+		height: 60%;
+		color: black;
+		font-size:18px;
+		font-family: Comic Sans MS;
+		}
+#font_size{
+		font-style: italic;
+		font-family: Comic Sans MS;
+		text-align:right;
+}
+#ferrari{
+	-webkit-border-radius: 25px;
+	text-align: center;
+	min-height: 450px;
+	border-style: ridge;
+	border-color: black;
+	-webkit-box-flex: 1;
+	margin: 15px ;
+	padding: 20px;
+	background : #eee;
+	color: black;
+	font-family: Myriad pro;
+	font-size: 25px;
+	clear: both;
+	-moz-box-shadow:     0 0 10px #000000;
+	   -webkit-box-shadow:  0 0 10px #000000;
+	   box-shadow:          0 0 10px #000000;
+ }
+  #ferrari li{
+	display: inline-block;
+	list-style:none;
+	padding: 20px;
+	font-family: Myriad pro;
+	font-size: 20px;
+ }
+ .Image {
+		width:500px;
+		padding:10px 10px 10px 10px; 		
+		text-align: center;	
+		
+		-webkit-transition: all 200ms ease-out;
+		   -moz-transition: all 200ms ease-out;
+		        transition: all 200ms ease-out;
+	}		
+	.Image img {
+	
+		margin:2px;
+		display:block;
+		border-style: ridge;
+		border-color: #2C3539;
+		-webkit-border-radius: 25px;
+		
+		-webkit-transform: scale(.8);
+		   -moz-transform: scale(.8);
+		    -ms-transform: scale(.8);
+		     -o-transform: scale(.8);		
+		        transform: scale(.8);
+	
+		-webkit-transition: all 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+		   -moz-transition: all 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+		        transition: all 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	}	
+	.Image:hover {
+		background-color:white;
+		background-color: rgba(200,200,200,.3);
+		-webkit-border-radius: 10px;
+		border-radius: 10px;		
+		cursor: pointer;
+	}	
+	.Image:hover img {
+		-moz-transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+#myform{
+	text-align: right;
+	color:#F87217;
+		}
+		footer ul li{
+			display: inline-block;
+		}
+#slide_show{
+	height:250px;
+	width: 500px;
+	margin-left:auto; 
+	margin-right:auto;
+	margin-bottom:10px; 
+	margin-top:10px; 
+}
+
+#copyright{
+text-align: center;
+}

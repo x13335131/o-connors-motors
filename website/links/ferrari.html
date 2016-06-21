@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>O'Connors|Ferrari </title>
+		<link href="../css/ferrari.css" type="text/css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'/>
+		
+		<script type="text/javascript">
+			<!-->
+			var image1=new Image()
+			image1.src="../ferrari/logos/audi.jpg"
+			var image2=new Image()
+			image2.src="../ferrari/logos/bugatti.jpg"
+			var image3=new Image()
+			image3.src="../ferrari/logos/ferrari.jpg"
+			var image4=new Image()
+			image4.src="../ferrari/logos/lambo.jpg"
+			var image5=new Image()
+			image5.src="../ferrari/logos/mercedes.jpg"
+			//-->
+			
+		</script>
+		<script language="JavaScript" type="text/javascript">
+		function changeFontSize(inc)
+		{
+		var p = document.getElementsByTagName('p');
+		for(n=0; n<p.length; n++) {
+		if(p[n].style.fontSize) {
+		var size = parseInt(p[n].style.fontSize.replace("px", ""));
+		} else {
+		var size = 18;
+		}
+		p[n].style.fontSize = size+inc + 'px';
+		}
+		}
+				</script>
+	</head>
+	
+	<body id="body">
+		<div id="wrapper">
+			<div id="login">
+				<div id="left_header"><!-- LOGO-->
+					<img src= "../ferrari/logos/logo.png" alt=""/>
+					</div>
+					<div id="right_header"><!--LOGIN SCRIPT-->
+						<script type = "text/javascript">
+							var count = 2;
+							function validate() {
+							var un = document.myform.username.value;
+							var pw = document.myform.pword.value;
+							var valid = false;
+							var unArray = ["username1", "username2", "username3", "username4" , "username5"];
+							var pwArray = ["password1", "password2", "password3", "password4" , "password5"];
+							for (var i=0; i <unArray.length; i++) {
+							if ((un == unArray[i]) && (pw == pwArray[i])) {
+							valid = true;
+							break;
+							}
+							}
+							if (valid) {
+							alert ("Login was sucessful. You will be redirected to the Newsletter Signup Page Now.");
+							window.location = "signup.html";
+							return false;
+							}
+							var t = " tries";
+							if (count == 1) {t = " try"}
+							if (count >= 1) {
+							alert ("Invalid username and/or password.  You have " + count + t + " left.");
+							document.myform.username.value = "";
+							document.myform.pword.value = "";
+							setTimeout("document.myform.username.focus()", 25);
+							setTimeout("document.myform.username.select()", 25);
+							count --;
+							}
+							else {
+							alert ("Still incorrect! You have no more attempts left!");
+							document.myform.username.value = "No more attempts allowed!";
+							document.myform.pword.value = "";
+							document.myform.username.disabled = true;
+							document.myform.pword.disabled = true;
+							return false;
+							}
+						}
+					</script>
+					
+					<form name = "myform"><!--LOGIN -->
+						<table>
+						<tr><td>
+							Newsletter Registration 
+						</td>
+						</tr>
+						<tr>
+						<td>
+							Enter User Name <input type="text" name="username">
+						 </td>
+						 </tr>
+						 <tr>
+						 <td>
+						Enter Password <input type="password" name="pword"> 
+						</td></tr>
+						<tr>
+						<td>
+						<input type="button" value="Sign In" name="Submit" onclick= "validate()"> 
+						</td>
+						</tr>
+						</table>
+					
+					</form>
+				</div>			
+			</div>
+			
+			<div id="top_menu"><!--TOP LINK MENU-->
+				<nav >
+					<ul>
+						<li class = "Button" > <a href = "../index.html"> Home </a> </li> 
+						<li class = "Button" > <a href = "ferrari.html">  Ferrari </a> </li>
+						<li class = "Button" > <a href = "../links/audi.html"> Audi</a> </li>
+						<li class = "Button" > <a href = "../links/lamborghini.html"> Lamborghini</a>  </li>
+						<li class = "Button" > <a href = "../links/bugatti.html"> Bugatti</a>  </li>
+						<li class = "Button" > <a href = "../links/mercedes.html"> Mercedes </a>  </li>
+					</ul>
+				</nav>
+			</div>
+			
+			<div id="maintext"><!-- MAIN BODY-->
+			<p id="font_size"><!--CHANGES FONT SIZE -->
+				Font size:
+				<a href="javascript:changeFontSize(1)"><img src = "../ferrari/buttons/plus.jpg" alt ="plus"/></a> 
+				<a href="javascript:changeFontSize(-1)"><img src = "../ferrari/buttons/minus.jpg" alt ="minus"/></a>
+				</p>
+				<p>Ferrari is an Italian luxury sports car manufacturer based in Maranello. Founded by Enzo Ferrari in 1929, as Scuderia Ferrari, 
+				the company sponsored drivers and manufactured race cars before moving into production of street-legal vehicles as Ferrari in 1947. 
+				In 2014 Fiat announced its intentions to sell its share in Ferrari, 
+				as of the announcement Fiat owned 90% of Ferrari.Throughout its history, the company has been noted for its continued participation in racing, 
+				especially in Formula One, where it has had great success. Ferrari road cars are generally seen as a symbol of speed, luxury and wealth.</p>
+				<section id = "ferrari_section">
+			<article>
+				<nav id="ferrari"> <!-- IMAGES -->
+					<ul>
+						<li class = "Image"> <img src = "../ferrari/images/f1.jpg" alt = "f1" width="500" height="300"/> <p> Ferrari 458 Italia</p> <p>0-100 km/h in 3.4s</p><p>&euro;174,590</p> </li>
+						<li class = "Image"> <img src = "../ferrari/images/f2.jpg" alt = "f2" width="500" height="300"/> <p> Ferrari 599 GTB novitec rosso</p> <p>Twin Supercharged V12 engine</p><p>&euro;164,000</p> </li>
+						<li class = "Image"> <img src = "../ferrari/images/f3.jpg" alt = "f3" width="500" height="300"/> <p> Ferrari 599 GT0 </p> <p>maximum speed over 334 km/h!</p> <p>&euro;129,300</p></li>
+						<li class = "Image"> <img src = "../ferrari/images/f4.jpg" alt = "f4" width="500" height="300"/> <p> Ferrari P4/5 </p> <p>6 speed semi-automatic transmission </p><p>&euro;200,000</p></li>
+						<li class = "Image"> <img src = "../ferrari/images/f5.jpg" alt = "f5" width="500" height="300"/> <p> Ferrari F430 </p><p>4.3L V8 petrol engine<br> top speed of 315 km/h</p> <p>&euro;179,100</p></li>
+						<li class = "Image"> <img src = "../ferrari/images/f6.jpg" alt = "f6" width="500" height="300"/> <p> Ferrari Enzo</p><p>The Enzo can accelerate to 97 km/h in 3.14 seconds & can reach 160 km/h in 6.6 seconds</p> <p>&euro;150,000</p></li>
+					</ul>
+				</nav>
+			</article>
+			</section>
+			<section id= "slide_show"> <!--SLIDESHOW -->
+				<img src="../ferrari/logos/audi.jpg" id="slide" width="500" height="250" alt ="Slideshow" />  
+				<script type="text/javascript">
+					<!--
+					var step=1
+					function slideit(){
+					document.images.slide.src=eval("image"+step+".src")
+					if(step<5)
+					step++
+					else
+					step=1
+					setTimeout("slideit()",5000)
+					}
+					slideit()
+					//-->
+				</script>
+			</section>
+				<footer id ="copyright"> <!-- FOOTER-->
+					<p> &copy; 2014 O'Connors | All Rights Reserved </p>
+					<ul>
+						<li class = "Icon"> <a href ="https://www.facebook.com/pages/OConnors/376949612483205"> <img src = "../ferrari/buttons/facebook.png" alt ="Facebook"/> </a> </li>
+						<li class = "Icon"> <a href ="http://www.youtube.com/channel/UCY1estaEUGTtGGGKvEuXK0Q?feature=watch"> <img src = "../ferrari/buttons/youtube.png" alt ="YouTube"/> </a> </li>
+						<li class = "Icon"> <a href ="mailto:Oconnorscars@gmail.com"> <img src = "../ferrari/buttons/email.png" alt ="Email"/> </a> </li>
+						<li class = "Icon"> <a href ="https://twitter.com/OConnorsCars"> <img src = "../ferrari/buttons/twitter.png" alt ="Twitter"/> </a> </li>
+					</ul>
+					
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>O'Connors|Lamborghini </title>
+		<link href="../css/lamborghini.css" type="text/css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'/>
+		
+		<script type="text/javascript">
+			<!-->
+			var image1=new Image()
+			image1.src="../lamborghini/logos/audi.jpg"
+			var image2=new Image()
+			image2.src="../lamborghini/logos/bugatti.jpg"
+			var image3=new Image()
+			image3.src="../lamborghini/logos/ferrari.jpg"
+			var image4=new Image()
+			image4.src="../lamborghini/logos/lambo.jpg"
+			var image5=new Image()
+			image5.src="../lamborghini/logos/mercedes.jpg"
+			//-->
+			
+		</script>
+		<script language="JavaScript" type="text/javascript">
+		function changeFontSize(inc)
+		{
+		var p = document.getElementsByTagName('p');
+		for(n=0; n<p.length; n++) {
+		if(p[n].style.fontSize) {
+		var size = parseInt(p[n].style.fontSize.replace("px", ""));
+		} else {
+		var size = 18;
+		}
+		p[n].style.fontSize = size+inc + 'px';
+		}
+		}
+				</script>
+	</head>
+	
+	<body id="body">
+		<div id="wrapper">
+			<div id="login">
+				<div id="left_header"> <!--LOGO -->
+					<img src= "../lamborghini/logos/logo.png" alt=""/>
+					</div>
+					<div id="right_header"> <!-- LOGIN SCRIPT-->
+						<script type = "text/javascript">
+							var count = 2;
+							function validate() {
+							var un = document.myform.username.value;
+							var pw = document.myform.pword.value;
+							var valid = false;
+							var unArray = ["username1", "username2", "username3", "username4" , "username5"];
+							var pwArray = ["password1", "password2", "password3", "password4" , "password5"];
+							for (var i=0; i <unArray.length; i++) {
+							if ((un == unArray[i]) && (pw == pwArray[i])) {
+							valid = true;
+							break;
+							}
+							}
+							if (valid) {
+							alert ("Login was sucessful. You will be redirected to the Newsletter Signup Page Now.");
+							window.location = "signup.html";
+							return false;
+							}
+							var t = " tries";
+							if (count == 1) {t = " try"}
+							if (count >= 1) {
+							alert ("Invalid username and/or password.  You have " + count + t + " left.");
+							document.myform.username.value = "";
+							document.myform.pword.value = "";
+							setTimeout("document.myform.username.focus()", 25);
+							setTimeout("document.myform.username.select()", 25);
+							count --;
+							}
+							else {
+							alert ("Still incorrect! You have no more attempts left!");
+							document.myform.username.value = "No more attempts allowed!";
+							document.myform.pword.value = "";
+							document.myform.username.disabled = true;
+							document.myform.pword.disabled = true;
+							return false;
+							}
+						}
+					</script>
+					
+					<form name = "myform"><!-- LOGIN -->
+						<table>
+						<tr><td>
+							Newsletter Registration 
+						</td>
+						</tr>
+						<tr>
+						<td>
+							Enter User Name <input type="text" name="username">
+						 </td>
+						 </tr>
+						 <tr>
+						 <td>
+						Enter Password <input type="password" name="pword"> 
+						</td></tr>
+						<tr>
+						<td>
+						<input type="button" value="Sign In" name="Submit" onclick= "validate()"> 
+						</td>
+						</tr>
+						</table>
+					
+					</form>
+				</div>			
+			</div>
+			
+			<div id="top_menu"> <!-- TOP LINK MENU-->
+				<nav >
+					<ul>
+						<li class = "Button" > <a href = "../index.html"> Home </a> </li> 
+						<li class = "Button" > <a href = "../links/ferrari.html">  Ferrari </a> </li>
+						<li class = "Button" > <a href = "../links/audi.html"> Audi</a> </li>
+						<li class = "Button" > <a href = "lamborghini.html"> Lamborghini</a>  </li>
+						<li class = "Button" > <a href = "../links/bugatti.html"> Bugatti</a>  </li>
+						<li class = "Button" > <a href = "../links/mercedes.html"> Mercedes </a>  </li>
+					</ul>
+				</nav>
+			</div>
+			
+			<div id="maintext">
+			<p id="font_size"><!-- CHANGE FONT -->
+				Font size:
+				<a href="javascript:changeFontSize(1)"><img src = "../lamborghini/buttons/plus.jpg" alt ="plus"/></a> 
+				<a href="javascript:changeFontSize(-1)"><img src = "../lamborghini/buttons/minus.jpg" alt ="minus"/></a>
+				</p>
+				<!-- INFO ON LAMBO -->
+				<p>Automobili Lamborghini is an Italian brand and manufacturer of luxury sports cars. 
+				Lamborghini's production facility and headquarters are located in Sant'Agata Bolognese Italy.
+				In 2011, Lamborghini's 831 employees produced 1,711 vehicles.
+				Ferruccio Lamborghini, an Italian manufacturing magnate, founded Automobili Ferruccio Lamborghini S.p.A. 
+				in 1963 to compete with established marques, including Ferrari. 
+				</p>
+				<section id = "lamborghini_section">
+			<article>
+				<nav id="lamborghini"><!--LAMBO IMAGES -->
+					<ul>
+						<li class = "Image"> <img src = "../lamborghini/images/l1.jpg" alt = "l1" width="500" height="300"/> <p> Lamborghini Revention </p> <p>	6.5 L V12</p><p>&euro;850,000</p> </li>
+						<li class = "Image"> <img src = "../lamborghini/images/l2.jpg" alt = "l2" width="500" height="300"/> <p> Lamborghini Murcielago LP640</p> <p>Transmission:6-speed manual</p><p>&euro;330,000</p> </li>
+						<li class = "Image"> <img src = "../lamborghini/images/l3.jpg" alt = "l3" width="500" height="300"/> <p> Lamborghini Galardo </p> <p>Offers two choices of transmissions, a conventional (H-Box) six-speed manual transmission, and an advanced six-speed<br> electro-hydraulically controlled semi-automatic robotized manual</p> <p>&euro;259,100</p></li>
+						<li class = "Image"> <img src = "../lamborghini/images/l4.jpg" alt = "l4" width="500" height="300"/> <p> Lamborghini Superleggera</p> <p>External mirrors heated, electrically <br>adjustable and manually foldable.<br>Acceleration: 0-100 km/h:3.4s<br> Top speed:325 km/h</p><p>&euro;247,390</p></li>
+						<li class = "Image"> <img src = "../lamborghini/images/l5.jpg" alt = "l5" width="500" height="300"/> <p> Lamborghini Aventador </p><p>Transmission: 7-speed ISR Semi-automatic</p><p>&euro;412,015</p></li>
+						<li class = "Image"> <img src = "../lamborghini/images/l6.jpg" alt = "l6" width="500" height="300"/> <p> Lamborghini Murcielago </p><p> 6.2 L V12 engine</p><p>&euro;311,433</p></li>
+					</ul>
+				</nav>
+			</article>
+			</section>
+		<section id= "slide_show"><!--SLIDESHOW -->
+				<img src="../lamborghini/logos/audi.jpg" id="slide" width="500" height="250" alt ="Slideshow" />  
+				<script type="text/javascript">
+					<!--
+					var step=1
+					function slideit(){
+					document.images.slide.src=eval("image"+step+".src")
+					if(step<5)
+					step++
+					else
+					step=1
+					setTimeout("slideit()",5000)
+					}
+					slideit()
+					//-->
+				</script>
+		</section>
+				<footer id ="copyright"><!-- FOOTER-->
+					<p> &copy; 2014 O'Connors | All Rights Reserved </p>
+					<ul>
+						<li class = "Icon"> <a href ="https://www.facebook.com/pages/OConnors/376949612483205"> <img src = "../lamborghini/buttons/facebook.png" alt ="Facebook"/> </a> </li>
+						<li class = "Icon"> <a href ="http://www.youtube.com/channel/UCY1estaEUGTtGGGKvEuXK0Q?feature=watch"> <img src = "../lamborghini/buttons/youtube.png" alt ="YouTube"/> </a> </li>
+						<li class = "Icon"> <a href ="mailto:Oconnorscars@gmail.com"> <img src = "../lamborghini/buttons/email.png" alt ="Email"/> </a> </li>
+						<li class = "Icon"> <a href ="https://twitter.com/OConnorsCars"> <img src = "../lamborghini/buttons/twitter.png" alt ="Twitter"/> </a> </li>
+					</ul>
+					
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

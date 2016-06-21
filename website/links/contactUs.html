@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>O'Connors|Contact Us </title>
+		<link href="../css/contactUs.css" type="text/css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'/>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&amp;sensor=true">
+		</script>
+		
+		<script type="text/javascript">
+			<!-->
+			var image1=new Image()
+			image1.src="../contactUs/logos/audi.jpg"
+			var image2=new Image()
+			image2.src="../contactUs/logos/bugatti.jpg"
+			var image3=new Image()
+			image3.src="../contactUs/logos/ferrari.jpg"
+			var image4=new Image()
+			image4.src="../contactUs/logos/lambo.jpg"
+			var image5=new Image()
+			image5.src="../contactUs/logos/mercedes.jpg"
+			//-->
+			
+		</script>
+	</head>
+	
+	<body id="body"> <!--BODY -->
+		<div id="wrapper">
+			<div id="login">
+				<div id="left_header"><!--LOGO -->
+					<img src= "../contactUs/logos/logo.png" alt=""/>
+					</div>
+					<div id="right_header"><!--LOGIN -->
+						<script type = "text/javascript">
+							var count = 2;
+							function validate() {
+							var un = document.myform.username.value;
+							var pw = document.myform.pword.value;
+							var valid = false;
+							var unArray = ["username1", "username2", "username3", "username4" , "username5"];
+							var pwArray = ["password1", "password2", "password3", "password4" , "password5"];
+							for (var i=0; i <unArray.length; i++) {
+							if ((un == unArray[i]) && (pw == pwArray[i])) {
+							valid = true;
+							break;
+							}
+							}
+							if (valid) {
+							alert ("Login was sucessful. You will be redirected to the Newsletter Signup Page Now.");
+							window.location = "../links/signup.html";
+							return false;
+							}
+							var t = " tries";
+							if (count == 1) {t = " try"}
+							if (count >= 1) {
+							alert ("Invalid username and/or password.  You have " + count + t + " left.");
+							document.myform.username.value = "";
+							document.myform.pword.value = "";
+							setTimeout("document.myform.username.focus()", 25);
+							setTimeout("document.myform.username.select()", 25);
+							count --;
+							}
+							else {
+							alert ("Still incorrect! You have no more attempts left!");
+							document.myform.username.value = "No more attempts allowed!";
+							document.myform.pword.value = "";
+							document.myform.username.disabled = true;
+							document.myform.pword.disabled = true;
+							return false;
+							}
+						}
+					</script>
+					
+					<form name = "myform">
+						<table>
+						<tr><td>
+							Newsletter Registration 
+						</td>
+						</tr>
+						<tr>
+						<td>
+							Enter User Name <input type="text" name="username">
+						 </td>
+						 </tr>
+						 <tr>
+						 <td>
+						Enter Password <input type="password" name="pword"> 
+						</td></tr>
+						<tr>
+						<td>
+						<input type="button" value="Sign In" name="Submit" onclick= "validate()"> 
+						</td>
+						</tr>
+						</table>
+					
+					</form>
+				</div>			
+			</div>
+			
+			<div id="top_menu"><!--MENU LINKS -->
+				<nav >
+					<ul>
+						<li class = "Button" > <a href = "../index.html"> Home </a> </li> 
+						<li class = "Button" > <a href = "../links/ferrari.html">  Ferrari </a> </li>
+						<li class = "Button" > <a href = "../links/audi.html"> Audi</a> </li>
+						<li class = "Button" > <a href = "../links/lamborghini.html"> Lamborghini</a>  </li>
+						<li class = "Button" > <a href = "../links/bugatti.html"> Bugatti</a>  </li>
+						<li class = "Button" > <a href = "../links/mercedes.html"> Mercedes </a>  </li>
+					</ul>
+				</nav>
+			</div>
+			
+			<div id="maintext"> <!--MAINTEXT-->
+				
+				<header>Contact Us </header>
+				
+				<p>Call us on : 01-8205317/ 0863655780<br />
+				
+					Email: Oconnorscars@gmail.com <br>
+					
+					Fax: 01 8982 500  <br />
+					<br>
+					Opening Hours: </br>
+						<ul>
+							<li>Mon-Fri: 10:00-18:00 &nbsp;</li>
+							<li>&nbsp; Sat: 10:00-14:00 &nbsp;</li>
+							<li>&nbsp; Sun: CLOSED </li>
+						</ul>
+
+					</p>
+				
+				<section id="map_section"> <!-- GOOGLE MAPS -->
+				
+				<script>
+			function initialize()
+			{
+			var mapProp = {
+			  center:new google.maps.LatLng(53.379945,-6.3583064),
+			  zoom:18,
+			  mapTypeId:google.maps.MapTypeId.ROADMAP
+			  };
+			var map=new google.maps.Map(document.getElementById("googleMap")
+			  ,mapProp);
+			}
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+			</script>
+			<div id="googleMap" style="width:100%;height:500px;"></div>
+			
+				</section>
+				<section id= "slide_show"> <!--slideshow -->
+				<img src="../contactUs/logos/audi.jpg" id="slide" width="500" height="250" alt ="Slideshow" />  
+				<script type="text/javascript">
+					<!--
+					var step=1
+					function slideit(){
+					document.images.slide.src=eval("image"+step+".src")
+					if(step<5)
+					step++
+					else
+					step=1
+					setTimeout("slideit()",5000)
+					}
+					slideit()
+					//-->
+				</script>
+				</section>
+					<!--FOOTER -->
+				<footer id ="copyright">
+					<p> &copy; 2014 O'Connors | All Rights Reserved </p>
+					<ul>
+						<li class = "Icon"> <a href ="https://www.facebook.com/pages/OConnors/376949612483205"> <img src = "../contactUs/buttons/facebook.png" alt ="Facebook"/> </a> </li>
+						<li class = "Icon"> <a href ="http://www.youtube.com/channel/UCY1estaEUGTtGGGKvEuXK0Q?feature=watch"> <img src = "../contactUs/buttons/youtube.png" alt ="YouTube"/> </a> </li>
+						<li class = "Icon"> <a href ="mailto:Oconnorscars@gmail.com"> <img src = "../contactUs/buttons/email.png" alt ="Email"/> </a> </li>
+						<li class = "Icon"> <a href ="https://twitter.com/OConnorsCars"> <img src = "../contactUs/buttons/twitter.png" alt ="Twitter"/> </a> </li>
+					</ul>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

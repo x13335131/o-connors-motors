@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>O'Connors|Bugatti </title>
+		<link href="../css/bugatti.css" type="text/css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'/>
+		
+		<script type="text/javascript">
+			<!-->
+			var image1=new Image()
+			image1.src="../bugatti/logos/audi.jpg"
+			var image2=new Image()
+			image2.src="../bugatti/logos/bugatti.jpg"
+			var image3=new Image()
+			image3.src="../bugatti/logos/ferrari.jpg"
+			var image4=new Image()
+			image4.src="../bugatti/logos/lambo.jpg"
+			var image5=new Image()
+			image5.src="../bugatti/logos/mercedes.jpg"
+			//-->
+			
+		</script>
+		<script language="JavaScript" type="text/javascript">
+		function changeFontSize(inc)
+		{
+		var p = document.getElementsByTagName('p');
+		for(n=0; n<p.length; n++) {
+		if(p[n].style.fontSize) {
+		var size = parseInt(p[n].style.fontSize.replace("px", ""));
+		} else {
+		var size = 18;
+		}
+		p[n].style.fontSize = size+inc + 'px';
+		}
+		}
+				</script>
+	</head>
+	
+	<body id="body">
+		<div id="wrapper">
+			<div id="login">
+				<div id="left_header">
+					<img src= "../bugatti/logos/logo.png" alt=""/>
+					</div>
+					<div id="right_header">
+						<script type = "text/javascript">
+							var count = 2;
+							function validate() {
+							var un = document.myform.username.value;
+							var pw = document.myform.pword.value;
+							var valid = false;
+							var unArray = ["username1", "username2", "username3", "username4" , "username5"];
+							var pwArray = ["password1", "password2", "password3", "password4" , "password5"];
+							for (var i=0; i <unArray.length; i++) {
+							if ((un == unArray[i]) && (pw == pwArray[i])) {
+							valid = true;
+							break;
+							}
+							}
+							if (valid) {
+							alert ("Login was sucessful. You will be redirected to the Newsletter Signup Page Now.");
+							window.location = "signup.html";
+							return false;
+							}
+							var t = " tries";
+							if (count == 1) {t = " try"}
+							if (count >= 1) {
+							alert ("Invalid username and/or password.  You have " + count + t + " left.");
+							document.myform.username.value = "";
+							document.myform.pword.value = "";
+							setTimeout("document.myform.username.focus()", 25);
+							setTimeout("document.myform.username.select()", 25);
+							count --;
+							}
+							else {
+							alert ("Still incorrect! You have no more attempts left!");
+							document.myform.username.value = "No more attempts allowed!";
+							document.myform.pword.value = "";
+							document.myform.username.disabled = true;
+							document.myform.pword.disabled = true;
+							return false;
+							}
+						}
+					</script>
+					
+					<form name = "myform">
+						<table>
+						<tr><td>
+							Newsletter Registration 
+						</td>
+						</tr>
+						<tr>
+						<td>
+							Enter User Name <input type="text" name="username">
+						 </td>
+						 </tr>
+						 <tr>
+						 <td>
+						Enter Password <input type="password" name="pword"> 
+						</td></tr>
+						<tr>
+						<td>
+						<input type="button" value="Sign In" name="Submit" onclick= "validate()"> 
+						</td>
+						</tr>
+						</table>
+					
+					</form>
+				</div>			
+			</div>
+			
+			<div id="top_menu"><!-- MENU LINKS -->
+				<nav >
+					<ul>
+						<li class = "Button" > <a href = "../index.html"> Home </a> </li> 
+						<li class = "Button" > <a href = "../links/ferrari.html">  Ferrari </a> </li>
+						<li class = "Button" > <a href = "../links/audi.html"> Audi</a> </li>
+						<li class = "Button" > <a href = "../links/lamborghini.html"> Lamborghini</a>  </li>
+						<li class = "Button" > <a href = "bugatti.html"> Bugatti</a>  </li>
+						<li class = "Button" > <a href = "../links/mercedes.html"> Mercedes </a>  </li>
+					</ul>
+				</nav>
+			</div>
+			
+			<div id="maintext"> <!--MAIN BODY -->
+			<p id="font_size"><!-- CHANGING FONT-->
+				Font size:
+				<a href="javascript:changeFontSize(1)"><img src = "../bugatti/buttons/plus.jpg" alt ="plus"/></a> 
+				<a href="javascript:changeFontSize(-1)"><img src = "../bugatti/buttons/minus.jpg" alt ="minus"/></a>
+				</p>
+				<p>Bugatti Automobiles is a French high-performance luxury automobiles manufacturer and a subsidiary of Volkswagen AG, 
+				with its head office and assembly plant in Molsheim, Alsace, France. 
+				Volkswagen purchased the Bugatti trademark in June 1998 and incorporated Bugatti Automobiles in 1999.
+				Bugatti presented several concept cars between 1998 and 2000 before commencing development of its first production model, 
+				the Veyron 16.4, delivering the first Veyron to a customer in 2005.</p>
+				<section id = "bugatti_section"> <!-- IMAGES-->
+			<article>
+				<nav id="bugatti">
+					<ul>
+						<li class = "Image"> <img src = "../bugatti/images/b1.jpg" alt = "b1" width="500" height="300"/> <p> Bugatti Veyron Sang Noir</p><p>7 Speed DSG Sequential Manual</p><p>&euro;1,520,000</p> </li>
+						<li class = "Image"> <img src = "../bugatti/images/b2.jpg" alt = "b2" width="500" height="300"/> <p> Bugatti Veyron Grand Sport </p> <p> 1200 horsepower</p><p>&euro;2,032,000</p> </li>
+						<li class = "Image"> <img src = "../bugatti/images/b3.jpg" alt = "b3" width="500" height="300"/> <p> Bugatti SuperSport WRE Vitesse </p> <p> "it's simply too fast for this world"</p> <p>&euro;2,050,000</p></li>
+						<li class = "Image"> <img src = "../bugatti/images/b4.jpg" alt = "b4" width="500" height="300"/> <p> Bugatti Veyron Grand Sport </p> <p>200-mph-plus top speed</p><p>&euro;2,550,000</p></li>
+						<li class = "Image"> <img src = "../bugatti/images/b5.jpg" alt = "b5" width="500" height="300"/> <p> Bugatti Veyron Grand Sport red/black</p><p>"A carbon-fiber and aluminum masterpiece <br>with an 8.0-litre turbo-quad <br>W16 engine"</p><p>&euro;1,110,000</p></li>
+						<li class = "Image"> <img src = "../bugatti/images/b6.jpg" alt = "b6" width="500" height="300"/> <p> Bugatti EB110 </p><p>"fitted with Quad-Turbo engine offering an amazing speed of 340km/h, and an acceleration of 0-100km/h in just 4.5 seconds only"</p> <p>&euro;450,580</p></li>
+					</ul>
+				</nav>
+			</article>
+			</section>
+			<section id= "slide_show"><!-- SLIDESHOW -->
+				<img src="../bugatti/logos/audi.jpg" id="slide" width="500" height="250" alt ="Slideshow" />  
+				<script type="text/javascript">
+					<!--
+					var step=1
+					function slideit(){
+					document.images.slide.src=eval("image"+step+".src")
+					if(step<5)
+					step++
+					else
+					step=1
+					setTimeout("slideit()",5000)
+					}
+					slideit()
+					//-->
+				</script>
+				</section>	
+				<footer id ="copyright"> <!--FOOTER -->
+					<p> &copy; 2014 O'Connors | All Rights Reserved </p>
+					<ul>
+						<li class = "Icon"> <a href ="https://www.facebook.com/pages/OConnors/376949612483205"> <img src = "../bugatti/buttons/facebook.png" alt ="Facebook"/> </a> </li>
+						<li class = "Icon"> <a href ="http://www.youtube.com/channel/UCY1estaEUGTtGGGKvEuXK0Q?feature=watch"> <img src = "../bugatti/buttons/youtube.png" alt ="YouTube"/> </a> </li>
+						<li class = "Icon"> <a href ="mailto:Oconnorscars@gmail.com"> <img src = "../bugatti/buttons/email.png" alt ="Email"/> </a> </li>
+						<li class = "Icon"> <a href ="https://twitter.com/OConnorsCars"> <img src = "../bugatti/buttons/twitter.png" alt ="Twitter"/> </a> </li>
+					</ul>
+					
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

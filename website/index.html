@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>O'Connors|Index </title>
+			<link href="css/index.css" type="text/css" rel="stylesheet" />
+			<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'/>
+			
+				<script language="JavaScript" type="text/javascript"><!--Changing font-->
+						function changeFontSize(inc)
+						{
+						var p = document.getElementsByTagName('p');
+						for(n=0; n<p.length; n++) {
+						if(p[n].style.fontSize) {
+						var size = parseInt(p[n].style.fontSize.replace("px", ""));
+						} else {
+						var size = 18;
+						}
+						p[n].style.fontSize = size+inc + 'px';
+						}
+						}
+				</script>
+		
+				<script type="text/javascript"> <!--Slideshow-->
+						var image1=new Image()
+						image1.src="home/logos/audi.jpg"
+						var image2=new Image()
+						image2.src="home/logos/bugatti.jpg"
+						var image3=new Image()
+						image3.src="home/logos/ferrari.jpg"
+						var image4=new Image()
+						image4.src="home/logos/lambo.jpg"
+						var image5=new Image()
+						image5.src="home/logos/mercedes.jpg"
+				</script>
+	</head>
+	
+	<body id="body"><!--body of text-->
+		<div id="wrapper"><!--Wrapper inside body-->
+			<div id="login"> <!--login area & logo-->
+				<div id="left_header"> <!--logo -->
+					<img src= "home/logos/logo.png" alt=""/>
+				</div>
+				
+				<div id="right_header"> <!--Login -->
+				
+				<script type = "text/javascript">
+							var count = 2;
+							function validate() {
+							var un = document.myform.username.value;
+							var pw = document.myform.pword.value;
+							var valid = false;
+							var unArray = ["username1", "username2", "username3", "username4" , "username5"];
+							var pwArray = ["password1", "password2", "password3", "password4" , "password5"];
+							for (var i=0; i <unArray.length; i++) {
+							if ((un == unArray[i]) && (pw == pwArray[i])) {
+							valid = true;
+							break;
+							}
+							}
+							if (valid) {
+							alert ("Login was sucessful. You will be redirected to the Newsletter Signup Page Now.");
+							window.location = "links/signup.html";
+							return false;
+							}
+							var t = " tries";
+							if (count == 1) {t = " try"}
+							if (count >= 1) {
+							alert ("Invalid username and/or password.  You have " + count + t + " left.");
+							document.myform.username.value = "";
+							document.myform.pword.value = "";
+							setTimeout("document.myform.username.focus()", 25);
+							setTimeout("document.myform.username.select()", 25);
+							count --;
+							}
+							else {
+							alert ("Still incorrect! You have no more attempts left!");
+							document.myform.username.value = "No more attempts allowed!";
+							document.myform.pword.value = "";
+							document.myform.username.disabled = true;
+							document.myform.pword.disabled = true;
+							return false;
+							}
+						}
+					</script>
+					
+					<form name = "myform">
+						<table>
+							<tr>
+								<td>
+									Newsletter Registration 
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+									Enter User Name <input type="text" name="username">
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									Enter Password <input type="password" name="pword"> 
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<input type="button" value="Sign In" name="Submit" onclick= "validate()"> 
+								</td>
+							</tr>
+						
+						</table>
+					
+					</form>
+				</div>			
+			</div>
+			
+			<div id="top_menu"> <!-- menu -->
+				<nav >
+					<ul>
+						<li class = "Button" > <a href = "index.html"> Home </a> </li> 
+						<li class = "Button" > <a href = "links/ferrari.html">  Ferrari </a> </li>
+						<li class = "Button" > <a href = "links/audi.html"> Audi</a> </li>
+						<li class = "Button" > <a href = "links/lamborghini.html"> Lamborghini</a>  </li>
+						<li class = "Button" > <a href = "links/bugatti.html"> Bugatti</a>  </li>
+						<li class = "Button" > <a href = "links/mercedes.html"> Mercedes </a>  </li>
+					</ul>
+				</nav>
+			</div>
+			
+			<div id="maintext"> <!-- main text -->
+					<p id="demo"> 
+					<script>
+					document.getElementById("demo").innerHTML = Date();
+					</script></p>
+					<p id="font_size">
+				Font size:
+				<a href="javascript:changeFontSize(1)"><img src = "home/buttons/plus.jpg" alt ="plus"/></a> 
+				<a href="javascript:changeFontSize(-1)"><img src = "home/buttons/minus.jpg" alt ="minus"/></a>
+				</p>
+				<p>
+				O'Connors garage deals in Executive Class Motors and is located in Castleknock, Dublin 15. 
+				Please take advantage of and browse our new website. Over the coming year we will be adding more brands so you'll have more to choose from!
+				Our Stock is updated on a weekly basis. We welcome trade-ins. Don't hesitate to get in touch if you think we can be of service.
+				To create an account to sign up for newsletters and take part in competitions, please click <a href = "links/createAccount.html"> here</a>.</p>
+				(To contact us and get directions to our new garage please click <a href = "links/contactUs.html"> here</a> )
+		
+				<br>
+				<br>
+				
+			<div id="vids">
+
+			<iframe width="500" height="315" src="//www.youtube.com/embed/Vqym_uydJCY" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<section id= "slide_show">
+				<img src="home/logos/audi.jpg" id="slide" width="500" height="250" alt ="Slideshow" />  
+				<script type="text/javascript">
+					<!--
+					var step=1
+					function slideit(){
+					document.images.slide.src=eval("image"+step+".src")
+					if(step<5)
+					step++
+					else
+					step=1
+					setTimeout("slideit()",5000)
+					}
+					slideit()
+					//-->
+				</script>
+				</section>	<br>
+				
+				<footer id ="copyright">
+					<p> &copy; 2014 O'Connors | All Rights Reserved </p>
+					<ul>
+						<li class = "Icon"> <a href ="https://www.facebook.com/pages/OConnors/376949612483205"> <img src = "home/buttons/facebook.png" alt ="Facebook"/> </a> </li>
+						<li class = "Icon"> <a href ="https://www.youtube.com/channel/UCqyNHkNspNEjpKB9sm_i-nA"> <img src = "home/buttons/youtube.png" alt ="YouTube"/> </a> </li>
+						<li class = "Icon"> <a href ="mailto:Oconnorscars@gmail.com"> <img src = "home/buttons/email.png" alt ="Email"/> </a> </li>
+						<li class = "Icon"> <a href ="https://twitter.com/OConnorsCars"> <img src = "home/buttons/twitter.png" alt ="Twitter"/> </a> </li>
+					</ul>
+					
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
